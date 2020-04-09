@@ -18,22 +18,40 @@ Back End write in Node for a Android(react-native) app toDo list.
 ## Routes
 
 ### Create User
-* [POST] `http:localhost:3000/signup`
+* [Method POST] `http:localhost:3000/signup`
 * Content *JSON*
 ```
-{
-	
-	"name": "Joe",			
-	"email": "joe25@example.com",
-	"password" : "secret"
+{	
+  "name": "Joe",
+  "email": "joe25@example.com",
+  "password" : "secret"
 }
 ```
 ### Login
-* [POST] `http:localhost:3000/signin`
-* [GET] `http:localhost:3000/tasks`
-* [POST] `http:localhost:3000/tasks`
-* [DELETE] `http:localhost:3000/tasks/:id`
-* [PUT] `http:localhost:3000/tasks/:id/toggle'`
+* [Method POST] `http:localhost:3000/signin`
+* Content *JSON*
+```
+{	  
+  "email": "joe25@example.com",
+  "password" : "secret"
+}
+```
+
+### Get tasks
+* **Authentication** with *bearer*
+* [Method GET] `http:localhost:3000/tasks`
+
+### Create task
+* **Authentication** with *bearer*
+* [Method POST] `http:localhost:3000/tasks`
+
+### Delete task
+* **Authentication** with *bearer*
+* [Method DELETE] `http:localhost:3000/tasks/:id`
+
+### Toggle(done) task
+* **Authentication** with *bearer*
+* [Method PUT] `http:localhost:3000/tasks/:id/toggle'`
 
 
 
