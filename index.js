@@ -10,7 +10,6 @@ consign()
 	.then('./api')
 	.then('./config/routes.js')
 	.into(app)
-
 app.db = db
 
 app.get('/', (req, res) => {
