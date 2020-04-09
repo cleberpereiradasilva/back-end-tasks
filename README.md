@@ -29,7 +29,7 @@ Back End write in Node for a Android(react-native) app toDo list.
 ```
 ### Login
 * [Method POST] `http:localhost:3000/signin`
-* Content *JSON*
+* Body(*json*)
 ```
 {	  
   "email": "joe25@example.com",
@@ -38,20 +38,29 @@ Back End write in Node for a Android(react-native) app toDo list.
 ```
 
 ### Get tasks
-* **Authentication** with *bearer*
 * [Method GET] `http:localhost:3000/tasks`
+* **Authentication** with *bearer*
+
 
 ### Create task
-* **Authentication** with *bearer*
 * [Method POST] `http:localhost:3000/tasks`
+* **Authentication** with *bearer*
+* Body(*json*)
+```
+{
+  "desc": "First task",
+  "estimatedAt": "2020-04-01"
+}
+```
+
 
 ### Delete task
-* **Authentication** with *bearer*
 * [Method DELETE] `http:localhost:3000/tasks/:id`
+* **Authentication** with *bearer*
 
 ### Toggle(done) task
-* **Authentication** with *bearer*
 * [Method PUT] `http:localhost:3000/tasks/:id/toggle'`
+* **Authentication** with *bearer*
 
 
 
